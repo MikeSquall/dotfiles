@@ -114,3 +114,4 @@ set background=dark
 set number
 
 set showcmd
+
