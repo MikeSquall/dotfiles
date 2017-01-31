@@ -115,3 +115,4 @@ set number
 
 set showcmd
 
+set nobackup
