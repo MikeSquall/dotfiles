@@ -114,5 +114,3 @@ set background=dark
 set number
 
 set showcmd
-
-set nobackup

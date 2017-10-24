@@ -6,5 +6,13 @@
 [alias]
 	l = log --color --graph --full-history --all --pretty=format:'%Cred%h%Creset -%C(cyan)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date iso
 	ll = log --color --graph --full-history --pretty=format:'%Cred%h%Creset -%C(cyan)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date iso
-    co = checkout
-    new = checkout -b
+	co = checkout
+	new = checkout -b
+	cancel = checkout .
+    rem = remote -v
+    st = status
+	sant = log --color --graph --full-history --pretty=format:'%Cred%h%Creset -%C(cyan)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date iso santiane_recette github/santiane_recette docker_recette/santiane_recette santiane_production docker_recette/santiane_production
+    delete = branch -D
+    pick = cherry-pick --strategy=recursive -X no-renames
+[core]
+	editor=vim
