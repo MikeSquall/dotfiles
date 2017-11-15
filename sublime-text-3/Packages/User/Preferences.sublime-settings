@@ -1,0 +1,19 @@
+{
+	"Seti_show_group_arrows": true,
+	"auto_wrap": true,
+	"color_scheme": "Packages/User/Monokai (Flake8Lint).tmTheme",
+	"font_size": 12,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"show_full_path": true,
+	"theme": "Seti_orig.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"update_check": false
+}

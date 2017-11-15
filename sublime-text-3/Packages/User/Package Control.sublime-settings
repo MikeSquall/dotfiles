@@ -1,0 +1,28 @@
+{
+	"auto_upgrade": false,
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"Anaconda",
+		"ANSIescape",
+		"AutoWrap",
+		"BracketHighlighter",
+		"Git",
+		"GitGutter",
+		"Indent XML",
+		"IndentX",
+		"OmniMarkupPreviewer",
+		"Package Control",
+		"Pretty JSON",
+		"Rainbowth",
+		"Seti_UI",
+		"ShellCommand",
+		"SublimeREPL",
+		"Tryton Snippets",
+		"Zeal"
+	]
+}

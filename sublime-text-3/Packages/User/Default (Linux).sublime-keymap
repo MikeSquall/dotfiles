@@ -1,0 +1,9 @@
+[
+    { "keys": ["ctrl+!"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+    { "keys": ["ctrl+shift+keypad_minus"],  "command": "fold_by_level", "args": {"level": 2} },
+    { "keys": ["ctrl+shift+keypad_plus"], "command": "unfold" },
+    { "keys": ["ctrl+shift+keypad_multiply"], "command": "unfold_all" },
+    { "keys": ["ctrl+shift+keypad_divide"], "command": "fold_by_level", "args": {"level": 1} },
+    { "keys": ["ctrl+shift+keypad_decimal"], "command": "fold_by_level", "args": {"level": 2} },
+    { "keys": ["ctrl+:"], "command": "toggle_comment", "args": { "block": false } },
+]

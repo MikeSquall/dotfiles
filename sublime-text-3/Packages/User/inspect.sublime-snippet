@@ -1,0 +1,14 @@
+<snippet>
+    <content>
+        import inspect
+        print('\n\n\n\n\n\n\n\n\n\n')
+        print('--------------------------------------')
+        print inspect.currentframe().f_back.f_code.co_filename
+        print('--------------------------------------')
+        print('\n\n\n\n\n\n\n\n\n\n')
+    </content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>inspect</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.python</scope>
+</snippet>
