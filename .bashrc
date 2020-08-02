@@ -1,6 +1,6 @@
-export WORKON_HOME=/home/michael/virtualenv
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
-source /home/michael/.local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=/home/michael/virtualenv
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
+#source /home/michael/.local/bin/virtualenvwrapper.sh
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -106,7 +106,6 @@ fi
 alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
-alias faq='cd ~/faq'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -148,35 +147,11 @@ _get_project_path() {
     echo $PROJECT_PATH
 }
 
-tryton_db_ps1() {
-    local PROJECT_PATH
-    PROJECT_PATH=$(_get_project_path)
-    if [ ! "$PROJECT_PATH" = "" ] && [ -f "$PROJECT_PATH"/conf/trytond.conf ]; then
-        DB_NAME=$(cat "$PROJECT_PATH"/conf/trytond.conf | grep "^uri = postgres" | sed -e "s/.*@[^:]\+:[0-9]\+\/\?//")
-        if [ ! "$DB_NAME" = "" ] && [ ! "$DB_NAME" == "uri = *" ]; then
-            echo " -> $DB_NAME "
-        fi
-    fi
-}
-
 # Add git branch if its present to PS1
 parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-PS1='\e[92m\D{%T} ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\[\033[01;33m\]$(tryton_db_ps1)\[\033[00m\n\$ '
-
-#alias coog
-alias restart_server='coog server kill && sleep 1 && coog server start'
-alias restart_client='coog client kill && sleep 1 && coog client start'
-alias restart_coog='coog kill && sleep 1 && coog start'
-alias cst="coog server tail -f | grep --line-buffered -vIE '(DEBUG|INFO)'"
-alias cstd="coog server tail -f"
-
-#alias tryton
-alias trytondstart='trytond -c conf/trytond.conf'
-
-#alias libreoffice 4.2
-alias writer42='./LibreOffice_4.2.8.2_Linux_x86-64_deb/DEBS/install/opt/libreoffice4.2/program/swriter'
+PS1='\e[92m\D{%T} ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\[\033[01;33m\]\[\033[00m\n\$ '
 
 #alias new tab with guake
 alias tab='guake -n guake -r '
@@ -189,3 +164,6 @@ alias ip_container="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPA
 
 export PATH=$PATH:/home/michael/bin
 
+
+# added by travis gem
+[ -f /home/michael/.travis/travis.sh ] && source /home/michael/.travis/travis.sh
